@@ -1,184 +1,348 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>大洲キウイ農園</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  color: #333;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-header h1 {
-  color: #2f6b2f;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-.hero {
-  position: relative;
-  height: 80vh;
-  background: url("images/test.jpg") center/cover;
-  display: flex;
-  align-items: center;
-  padding: 0 60px;
-}
-
-.hero-text {
-  background: rgba(255,255,255,0.8);
-  padding: 30px;
-  max-width: 500px;
-}
-
-.hero h2 {
-  font-size: 32px;
-  color: #2f6b2f;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: #2f6b2f;
-  color: #fff;
-  text-decoration: none;
-}
-
-.section {
-  padding: 60px 40px;
-  text-align: center;
-}
-
-.features {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-
-.feature {
-  width: 22%;
-}
-
-.products {
-  display: flex;
-  gap: 20px;
-}
-
-.card {
-  flex: 1;
-  border: 1px solid #ddd;
-  padding: 20px;
-}
-
-.card img {
-  width: 100%;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #f5f5f5;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="大洲キウイ農園 - 愛媛県大洲市。日本一のキウイ産地から、本物の甘さをお届けします。">
+  <meta property="og:title" content="大洲キウイ農園 | 日本一の生産量">
+  <meta property="og:description" content="愛媛県はキウイフルーツの生産量30年連続全国1位。瀬戸内の温暖な気候が育てた本物の甘さをお届けします。">
+  <title>大洲キウイ農園 | OZU KIWI FARM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Zen+Old+Mincho:wght@400;700;900&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-  <h1>大洲キウイ農園</h1>
-  <nav>
-    <a href="#">農園について</a>
-    <a href="#">商品</a>
-    <a href="#">食べ方</a>
-    <a href="#">お問い合わせ</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <h2>日本一の生産量!!<br>大洲市の自然が育てた、本物の甘さ</h2>
-    <p>愛媛県はキウイ生産量30年連続全国1位。栄養たっぷりのキウイをお届けします。</p>
-    <a href="#" class="btn">商品を見る</a>
-  </div>
-</section>
-
-<section class="section">
-  <h2>選ばれる理由</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>30年連続全国1位</h3>
-      <p>愛媛県はキウイ生産量トップ</p>
+  <!-- ナビゲーション -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-en">OZU KIWI FARM</span>
+        <span class="logo-ja">大洲キウイ農園</span>
+      </a>
+      <nav class="nav">
+        <a href="#about">農園について</a>
+        <a href="#products">商品紹介</a>
+        <a href="#howto">保存方法・食べ方</a>
+        <a href="#access">アクセス</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <a href="#products" class="btn-shop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        オンラインショップ
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="feature">
-      <h3>自然の恵み</h3>
-      <p>温暖な気候で育成</p>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about">農園について</a>
+      <a href="#products">商品紹介</a>
+      <a href="#howto">保存方法・食べ方</a>
+      <a href="#access">アクセス</a>
+      <a href="#contact">お問い合わせ</a>
+      <a href="#products" class="btn-shop-mobile">オンラインショップ</a>
     </div>
-    <div class="feature">
-      <h3>栄養たっぷり</h3>
-      <p>ビタミン豊富で美容にも◎</p>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/kiwi-farm.jpg" alt="大洲キウイ農園のキウイ" class="hero-img">
+      <div class="hero-overlay"></div>
     </div>
-    <div class="feature">
-      <h3>こだわり栽培</h3>
-      <p>発酵竹チップ使用</p>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>愛媛県 30年連続全国1位</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-main">日本一の生産量</span>
+        <span class="hero-title-sub">大洲市の自然が育てた、</span>
+        <em class="hero-title-accent">本物の甘さ</em>
+      </h1>
+      <p class="hero-desc">
+        瀬戸内の温暖な気候と豊かな自然が生んだ、<br>
+        栄養たっぷりの大洲のキウイをお届けします。
+      </p>
+      <div class="hero-cta">
+        <a href="#products" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          商品を見る
+        </a>
+        <a href="#products" class="btn-secondary">
+          🎁 ギフト・贈答用はこちら
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>商品紹介</h2>
-  <div class="products">
-
-    <div class="card">
-      <img src="images/test.jpg">
-      <h3>贈答用キウイ</h3>
-      <p>大玉のみ厳選。ギフトに最適。</p>
-      <a href="#" class="btn">購入する</a>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="images/test.jpg">
-      <h3>訳ありキウイ</h3>
-      <p>お得に楽しめる家庭用。</p>
-      <a href="#" class="btn">購入する</a>
+  <!-- 特徴4項目 -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item" data-delay="0">
+          <div class="feature-icon">♛</div>
+          <h3>30年連続全国1位</h3>
+          <p>愛媛県はキウイの生産量<br>30年連続全国1位！</p>
+        </div>
+        <div class="feature-item" data-delay="100">
+          <div class="feature-icon">☀</div>
+          <h3>自然の恵み</h3>
+          <p>瀬戸内の温暖な気候と<br>潮風で育まれたキウイ</p>
+        </div>
+        <div class="feature-item" data-delay="200">
+          <div class="feature-icon">🌿</div>
+          <h3>栄養たっぷり</h3>
+          <p>ビタミンCがレモンより多く、<br>美肌づくりにもおすすめ</p>
+        </div>
+        <div class="feature-item" data-delay="300">
+          <div class="feature-icon">🌱</div>
+          <h3>こだわりの栽培</h3>
+          <p>発酵竹チップを使用し、<br>環境に配慮した栽培</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- 農園紹介 -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-image">
+        <img src="images/farm-aerial.jpg" alt="大洲キウイ農園 空撮">
+        <div class="about-image-badge">
+          <span class="badge-num">30</span>
+          <span class="badge-text">年の<br>歴史</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-label">ABOUT US</div>
+        <h2 class="section-title">この土地で<br>続けて30年</h2>
+        <p>大洲の自然とともに歩んできた30年。土づくりからこだわり、安心・安全で本当においしいキウイを育てています。</p>
+        <p>各種農業賞も受賞し、これからも皆さまに笑顔をお届けします。発酵竹チップを活用した独自の土壌改良で、環境にも人にも優しいキウイを栽培しています。</p>
+        <a href="#about" class="btn-outline">農園について詳しく見る →</a>
+      </div>
+    </div>
+  </section>
 
-<section class="section">
-  <h2>おいしい食べ方</h2>
-  <p>
-    半分に切ってスプーンでそのまま。<br>
-    ヨーグルトやスムージーにもおすすめ。
-  </p>
-</section>
+  <!-- 商品 -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">PRODUCTS</div>
+        <h2 class="section-title">商品紹介</h2>
+        <p class="section-desc">幹に一番近い位置にある、甘くておいしい大玉サイズのキウイを厳選してお届けします。</p>
+      </div>
 
-<section class="section">
-  <h2>保存方法</h2>
-  <p>
-    ビニール袋に入れて冷蔵保存。<br>
-    バナナやリンゴと一緒に置くと早く熟します。
-  </p>
-</section>
+      <div class="products-grid">
+        <div class="product-featured">
+          <div class="product-featured-img">
+            <img src="images/kiwi-odama.jpg" alt="大玉キウイ">
+          </div>
+          <div class="product-featured-content">
+            <h3>厳選した大玉サイズ</h3>
+            <p>幹に一番近い位置にできる甘くておいしい「扁平」の大玉サイズのみを厳選してお届けします。</p>
+          </div>
+        </div>
 
-<footer>
-  <p>© 大洲キウイ農園</p>
-</footer>
+        <div class="product-card">
+          <div class="product-tag gift">贈答用</div>
+          <div class="product-card-img">
+            <img src="images/hero-kiwi.jpg" alt="完熟キウイ 贈答用">
+          </div>
+          <div class="product-card-content">
+            <h3>完熟キウイ（贈答用）</h3>
+            <p>食べ頃でお届けします。<br>大切な方への贈り物に。</p>
+            <a href="#contact" class="btn-product green">詳しく見る・購入する</a>
+          </div>
+        </div>
 
+        <div class="product-card">
+          <div class="product-tag home">ご家庭用</div>
+          <div class="product-card-img">
+            <img src="images/kiwi-wakeari.jpg" alt="訳ありキウイ">
+          </div>
+          <div class="product-card-content">
+            <h3>訳ありキウイ</h3>
+            <p>見た目にばらつきはありますが、<br>味はそのまま。お得に楽しめます。</p>
+            <a href="#contact" class="btn-product orange">詳しく見る・購入する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 保存方法・食べ方 -->
+  <section class="howto" id="howto">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">HOW TO</div>
+        <h2 class="section-title">保存方法・食べ方</h2>
+      </div>
+      <div class="howto-grid">
+        <div class="howto-card">
+          <div class="howto-num">01</div>
+          <h3>追熟のコツ</h3>
+          <p>固いキウイはリンゴやバナナと一緒に袋に入れて常温で2〜3日。エチレンガスで甘く熟します。</p>
+        </div>
+        <div class="howto-card">
+          <div class="howto-num">02</div>
+          <h3>熟れ加減の確認</h3>
+          <p>軽く押してやわらかく弾力があれば食べ頃。甘い香りもサインです。</p>
+        </div>
+        <div class="howto-card">
+          <div class="howto-num">03</div>
+          <h3>保存方法</h3>
+          <p>未熟なものは常温保存。熟れたらポリ袋に入れて冷蔵庫へ。約1週間が目安です。</p>
+        </div>
+        <div class="howto-card">
+          <div class="howto-num">04</div>
+          <h3>おいしい食べ方</h3>
+          <p>半分に切ってスプーンで食べるのが最もシンプル。スムージーやケーキのトッピングにも最高です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お知らせ -->
+  <section class="news" id="news">
+    <div class="container">
+      <div class="news-inner">
+        <div class="section-label">NEWS</div>
+        <h2 class="section-title">お知らせ</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">2024.05.01</span>
+            <span class="news-tag">お知らせ</span>
+            <span class="news-text">2024年度の販売を開始しました</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2024.04.15</span>
+            <span class="news-tag">収穫情報</span>
+            <span class="news-text">今年も甘くておいしいキウイが育っています！</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2024.03.20</span>
+            <span class="news-tag">メディア情報</span>
+            <span class="news-text">テレビ番組の取材を受けました</span>
+          </li>
+        </ul>
+        <a href="#news" class="btn-outline">一覧を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクセス -->
+  <section class="access" id="access">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">ACCESS</div>
+        <h2 class="section-title">アクセス</h2>
+      </div>
+      <div class="access-inner">
+        <div class="access-info">
+          <div class="access-item">
+            <span class="access-icon">📍</span>
+            <div>
+              <strong>所在地</strong>
+              <p>愛媛県大洲市 ○○町○○番地</p>
+            </div>
+          </div>
+          <div class="access-item">
+            <span class="access-icon">🚗</span>
+            <div>
+              <strong>お車でお越しの方</strong>
+              <p>松山自動車道 大洲ICより約15分</p>
+            </div>
+          </div>
+          <div class="access-item">
+            <span class="access-icon">🚃</span>
+            <div>
+              <strong>公共交通機関をご利用の方</strong>
+              <p>JR予讃線 伊予大洲駅よりタクシーで約20分</p>
+            </div>
+          </div>
+          <div class="access-item">
+            <span class="access-icon">📞</span>
+            <div>
+              <strong>お電話</strong>
+              <p>0893-XX-XXXX（受付時間 9:00〜17:00）</p>
+            </div>
+          </div>
+        </div>
+        <div class="access-map">
+          <div class="map-placeholder">
+            <span>📍 Google マップ</span>
+            <p>大洲キウイ農園</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-map">地図を開く</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-label">CONTACT</div>
+        <h2 class="section-title">お問い合わせ</h2>
+        <p>ご注文・ご質問はお気軽にどうぞ。通常2営業日以内にご返信いたします。</p>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">件名</label>
+            <select id="subject" name="subject">
+              <option value="">選択してください</option>
+              <option value="order">ご注文について</option>
+              <option value="gift">贈答用について</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">メッセージ <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="ご注文内容・ご質問をお書きください" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">送信する →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-en">OZU KIWI FARM</span>
+        <span class="logo-ja">大洲キウイ農園</span>
+        <p>愛媛県大洲市の豊かな自然の中で、<br>本物の甘さを育て続けています。</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">農園について</a>
+        <a href="#products">商品紹介</a>
+        <a href="#howto">保存方法・食べ方</a>
+        <a href="#access">アクセス</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 大洲キウイ農園 OZU KIWI FARM. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
