@@ -1,14 +1,184 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>テストページ</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大洲キウイ農園</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  color: #2f6b2f;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url("images/test.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.hero-text {
+  background: rgba(255,255,255,0.8);
+  padding: 30px;
+  max-width: 500px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  color: #2f6b2f;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #2f6b2f;
+  color: #fff;
+  text-decoration: none;
+}
+
+.section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.feature {
+  width: 22%;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f5f5f5;
+}
+</style>
 </head>
+
 <body>
 
-  <h1>公開テスト成功</h1>
-  <p>Cloudflareに公開できています。</p>
+<header>
+  <h1>大洲キウイ農園</h1>
+  <nav>
+    <a href="#">農園について</a>
+    <a href="#">商品</a>
+    <a href="#">食べ方</a>
+    <a href="#">お問い合わせ</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>日本一の生産量!!<br>大洲市の自然が育てた、本物の甘さ</h2>
+    <p>愛媛県はキウイ生産量30年連続全国1位。栄養たっぷりのキウイをお届けします。</p>
+    <a href="#" class="btn">商品を見る</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>選ばれる理由</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>30年連続全国1位</h3>
+      <p>愛媛県はキウイ生産量トップ</p>
+    </div>
+    <div class="feature">
+      <h3>自然の恵み</h3>
+      <p>温暖な気候で育成</p>
+    </div>
+    <div class="feature">
+      <h3>栄養たっぷり</h3>
+      <p>ビタミン豊富で美容にも◎</p>
+    </div>
+    <div class="feature">
+      <h3>こだわり栽培</h3>
+      <p>発酵竹チップ使用</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>商品紹介</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="images/test.jpg">
+      <h3>贈答用キウイ</h3>
+      <p>大玉のみ厳選。ギフトに最適。</p>
+      <a href="#" class="btn">購入する</a>
+    </div>
+
+    <div class="card">
+      <img src="images/test.jpg">
+      <h3>訳ありキウイ</h3>
+      <p>お得に楽しめる家庭用。</p>
+      <a href="#" class="btn">購入する</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>おいしい食べ方</h2>
+  <p>
+    半分に切ってスプーンでそのまま。<br>
+    ヨーグルトやスムージーにもおすすめ。
+  </p>
+</section>
+
+<section class="section">
+  <h2>保存方法</h2>
+  <p>
+    ビニール袋に入れて冷蔵保存。<br>
+    バナナやリンゴと一緒に置くと早く熟します。
+  </p>
+</section>
+
+<footer>
+  <p>© 大洲キウイ農園</p>
+</footer>
 
 </body>
 </html>
